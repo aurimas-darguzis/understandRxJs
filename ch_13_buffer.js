@@ -13,6 +13,8 @@ const foo = Rx.Observable.of('h', 'e', 'l', 'l', 'o')
  *    bufferWhen
  * 
  * -----h-----(he)--(hel)-(hell)(hello|)
+ * 
+ * 
  */
 
  const result = foo.bufferCount(2)
