@@ -21,3 +21,6 @@ const resultObservable = sourceObservable
  *    0|  23| 2|  45| 4|
  * ---0---23--2---45--4|
  */
+
+ resultObservable.subscribe(x => console.log(x)
+)
