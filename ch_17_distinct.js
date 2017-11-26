@@ -21,3 +21,9 @@ const flusher = Rx.Observable.interval(1100).take(1)
      // when should the registry be cleared
     flusher  
   )
+
+  result.subscribe(
+    function (x) { console.log(`next ${x}`)},
+    function (err) { console.log(`error ${err}`)},
+    function () { console.log('done')}
+  )
