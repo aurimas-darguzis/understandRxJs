@@ -13,6 +13,7 @@ const bar = foo.map(x => x.toUpperCase())
  * 
  * retryWhen
  * -------------e-------------e-------------e (errorObs)
+ * --A-B--C--D--------------A-B--C--D------------A-B--C--D--
  */
 
 // const result = bar.retry(2)
