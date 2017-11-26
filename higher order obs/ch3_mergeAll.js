@@ -7,7 +7,6 @@ const clockObservable = clickObservable
   // .mergeAll(2) only merge 2 observables, others will be ignored
 
 /**
- * ------+------+------------
  * ------+---------+---------------
  *        \-0-1-2-3 \-0-1-2-3-4-5-6
  *       mergeAll
