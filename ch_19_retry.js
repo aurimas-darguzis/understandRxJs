@@ -6,12 +6,17 @@ const bar = foo.map(x => x.toUpperCase())
 /**
  * --a--b--c--d--2| (foo)
  * map(toUpperCase)
- * --A-B--C--D--#   (bar)
+ * --A-B--C--D--#   (bar) next/error/complete
+ *
  *  retry
  * --A-B--C--D------A-B--C--D----A-B--C--D-#
+ * 
+ * retryWhen
+ * -------------e-------------e-------------e (errorObs)
  */
 
-const result = bar.retry(2)
+// const result = bar.retry(2)
+const result = bar.retryWhen(errorObs => errorObs.delay(1000))
 
 result.subcribe(
   function (x) { console.log(`next ${x}`)},
